@@ -1,29 +1,21 @@
-import numpy as np
 from board import Board
 from ship import Ship
 from destroyer import Destroyer
 from player import Player
-
-
+from carrier import Carrier
 
 print("----Battleship Game----\n")
 
 def run_game():
+
     playerBoard = Board()
     player = Player(playerBoard)
-
-
-
-
-
-
-
-
-
-    #player1Board.addShip(4,3)
     computerBoard = Board()
     computerPlayer = Player(computerBoard)
-    #computerBoard.addShip(2,1)
+
+    playerBoard.setUpBoard(player)
+    print(player.shipLocations)
+
     print("Player's board: ")
     playerBoard.showBoard()
     print("Computer's board: ")

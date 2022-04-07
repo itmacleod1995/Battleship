@@ -1,8 +1,7 @@
 from ship import Ship
 
-class Destroyer(Ship):
+class Carrier(Ship):
     def __init__(self, name):
         super().__init__(name)
-        self.spaces = 2
-
+        self.spaces = 4
 
