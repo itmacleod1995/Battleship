@@ -1,7 +1,18 @@
+import numpy as np
+from board import Board
+
+ROWS = 10
+COLS = 10
+
+
+
 print("----Battleship Game----")
 
 def run_game():
-    pass
+    player1Board = Board()
+    player1Board.showBoard()
+
+
 
 
 if __name__ == "__main__":
