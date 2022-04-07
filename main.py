@@ -1,21 +1,31 @@
 import numpy as np
 from board import Board
 from ship import Ship
+from destroyer import Destroyer
 from player import Player
 
 
 
-print("----Battleship Game----")
+print("----Battleship Game----\n")
 
 def run_game():
-    player1Board = Board()
-    player1 = Player(player1Board)
-    player1Board.addShip(4,3)
+    playerBoard = Board()
+    player = Player(playerBoard)
+
+
+
+
+
+
+
+
+
+    #player1Board.addShip(4,3)
     computerBoard = Board()
     computerPlayer = Player(computerBoard)
-    computerBoard.addShip(2,1)
+    #computerBoard.addShip(2,1)
     print("Player's board: ")
-    player1Board.showBoard()
+    playerBoard.showBoard()
     print("Computer's board: ")
     computerBoard.showBoard()
     print("")
@@ -25,7 +35,7 @@ def run_game():
         print("Player 1's turn: ")
         x = int(input("Enter x coordinate: "))
         y = int(input("Enter y coordinate: "))
-        player1.fire(x, y, computerBoard)
+        player.fire(x, y, computerBoard)
         break
 
 

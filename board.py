@@ -1,4 +1,5 @@
 from ship import Ship
+
 class Board:
     def __init__(self):
         self.rows = 10
@@ -11,6 +12,7 @@ class Board:
             print(row)
         print("")
 
-    def addShip(self, x, y):
-        self.board[x][y] = "s"
+    def addShip(self, x, y, ship):
+        self.board[x][y] = ship.name
+
 
