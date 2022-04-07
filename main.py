@@ -13,8 +13,6 @@ def run_game():
     computerBoard = Board()
     computerPlayer = Player(computerBoard)
 
-    playerBoard.setUpBoard(player)
-    print(player.shipLocations)
 
     print("Player's board: ")
     playerBoard.showBoard()
