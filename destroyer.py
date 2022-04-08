@@ -6,3 +6,4 @@ class Destroyer(Ship):
         self.spaces = 2
 
 
+

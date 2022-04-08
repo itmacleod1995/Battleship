@@ -10,6 +10,9 @@ def run_game():
 
     playerBoard = Board()
     player = Player(playerBoard)
+    player.setUpBoard("gameFiles/playerShip.txt")
+
+
     computerBoard = Board()
     computerPlayer = Player(computerBoard)
 
