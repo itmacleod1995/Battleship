@@ -1,6 +1,9 @@
 #from board import Board
 from destroyer import Destroyer
 from carrier import Carrier
+from battleship import Battleship
+from submarine import Submarine
+from patrol import PatrolBoat
 
 class Player:
 
@@ -27,6 +30,27 @@ class Player:
                         coordinateX = int(c[1])
                         coordinateY = int(c[3])
                         self.board.addShip(coordinateX, coordinateY, carrier)
+                elif "battleship" in line.split(" ")[1]:
+                    battleship = Battleship("B")
+                    coordinates = line.split(" ")[2:]
+                    for c in coordinates:
+                        coordinateX = int(c[1])
+                        coordinateY = int(c[3])
+                        self.board.addShip(coordinateX, coordinateY, battleship)
+                elif "submarine" in line.split(" ")[1]:
+                    submarine = Submarine("S")
+                    coordinates = line.split(" ")[2:]
+                    for c in coordinates:
+                        coordinateX = int(c[1])
+                        coordinateY = int(c[3])
+                        self.board.addShip(coordinateX, coordinateY, submarine)
+                elif "patrol" in line.split(" ")[1]:
+                    patrol = PatrolBoat("P")
+                    coordinates = line.split(" ")[2:]
+                    for c in coordinates:
+                        coordinateX = int(c[1])
+                        coordinateY = int(c[3])
+                        self.board.addShip(coordinateX, coordinateY, patrol)
 
 
 
