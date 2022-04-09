@@ -3,6 +3,7 @@ class Ship:
         self.name = name
         self.space_hit = 0
         self.coordinates = []
+        self.isHidden = True
 
     def printCoordinates(self):
         for coordinate in self.coordinates:

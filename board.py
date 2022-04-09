@@ -3,6 +3,7 @@ from player import Player
 from destroyer import Destroyer
 from carrier import Carrier
 
+
 class Board:
     def __init__(self):
         self.rows = 10
