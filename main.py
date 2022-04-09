@@ -4,6 +4,7 @@ from destroyer import Destroyer
 from player import Player
 from computer import Computer
 from carrier import Carrier
+import random
 
 print("----Battleship Game----\n")
 
@@ -33,12 +34,28 @@ def run_game():
             x = int(input("Enter x coordinate: "))
             y = int(input("Enter y coordinate: "))
             player.fire(x, y, computerBoard, computer)
+            print("Computer's Board")
             computerBoard.showBoard()
             if computer.shipsSunk == 5:
                 print("Player wins!")
                 break
         else:
             print("Computer's turn")
+            findingCoordinates = True
+            while findingCoordinates:
+                x = random.randint(0, 9)
+                y = random.randint(0, 9)
+                if playerBoard.board[x][y] != " " and playerBoard.board[x][y] != "X":
+                    computer.fire(x, y, player, playerBoard)
+                    findingCoordinates = False
+
+                print("Player's Board")
+                playerBoard.showBoard()
+
+
+            if player.shipsSunk == 5:
+                print("Computer wins!")
+                break
 
         round += 1
 

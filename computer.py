@@ -24,7 +24,15 @@ class Computer:
         self.shipsSunk = 0
 
     def fire(self, x, y, player, playerBoard):
-        pass
+        print("Firing at coordinate {} {}".format(x, y))
+        if playerBoard.board[x][y] != "■" and playerBoard.board[x][y] != " ":
+            print("Hit!\n")
+            player.addDamageToShip(playerBoard.board[x][y])
+            playerBoard.board[x][y] = "X"
+        else:
+            print("Miss!\n")
+            playerBoard.board[x][y] = " "
+
 
 
 
