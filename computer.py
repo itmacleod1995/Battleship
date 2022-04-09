@@ -14,36 +14,37 @@ class Computer:
         self.submarineCoordinates = [[(2,7), (2,8), (2,9)], [(8,0), (8,1), (8,2)]]
         self.patrolCoordinates = [[(9,0), (9,1)], [(8,7), (8,8)], [(6,7), (6,8)]]
 
+    def placeShip(self, coordinates, ship):
+        for coordinate in coordinates:
+            self.board.addShip(coordinate[0], coordinate[1], ship)
+
     def setUpBoard(self, file):
         #set up destroyer
         destroyer = Destroyer("D")
         destroyerCoordinate = random.choice(self.destroyerCoordinates)
-        for coordinate in destroyerCoordinate:
-            self.board.addShip(coordinate[0], coordinate[1], destroyer)
+        self.placeShip(destroyerCoordinate, destroyer)
 
         #set up carrier
         carrier = Carrier("C")
         carrierCoordinates = random.choice(self.carrierCoordinates)
-        for coordinate in carrierCoordinates:
-            self.board.addShip(coordinate[0], coordinate[1], carrier)
+        self.placeShip(carrierCoordinates, carrier)
 
         #set up battleship
         battleship = Battleship("B")
         battleshipCoordinates = random.choice(self.battleshipCoordinates)
-        for coordinate in battleshipCoordinates:
-            self.board.addShip(coordinate[0], coordinate[1], battleship)
+        self.placeShip(battleshipCoordinates, battleship)
 
         #set up submarine
         sub = Submarine("S")
         submarineCoordinates = random.choice(self.submarineCoordinates)
-        for coordinate in submarineCoordinates:
-            self.board.addShip(coordinate[0], coordinate[1], sub)
+        self.placeShip(submarineCoordinates, sub)
 
         # set up patrol boat
         patrol = PatrolBoat("P")
         patrolCoordinates = random.choice(self.patrolCoordinates)
-        for coordinate in patrolCoordinates:
-            self.board.addShip(coordinate[0], coordinate[1], patrol)
+        self.placeShip(patrolCoordinates, patrol)
+
+
 
 
 
