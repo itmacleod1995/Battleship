@@ -23,6 +23,10 @@ class Computer:
 
         self.shipsSunk = 0
 
+    def fire(self, x, y, player, playerBoard):
+        pass
+
+
 
     def placeShip(self, coordinates, ship):
         for coordinate in coordinates:
@@ -76,6 +80,7 @@ class Computer:
             if self.patrol.space_hit == self.patrol.spaces:
                 print("The computer's patrol boat has been sunk!")
                 self.shipsSunk += 1
+
 
 
 

@@ -60,5 +60,6 @@ class Player:
             computerBoard.board[x][y] = "X"
         else:
             print("Miss!")
+            computerBoard.board[x][y] = "O"
 
 
