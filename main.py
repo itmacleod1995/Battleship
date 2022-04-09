@@ -38,6 +38,7 @@ def run_game():
             computerBoard.showBoard()
             if computer.shipsSunk == 5:
                 print("Player wins!")
+                print("Total rounds = {}".format(round))
                 break
         else:
             print("Computer's turn")
@@ -55,6 +56,7 @@ def run_game():
 
             if player.shipsSunk == 5:
                 print("Computer wins!")
+                print("Total rounds {}".format(round))
                 break
 
         round += 1
