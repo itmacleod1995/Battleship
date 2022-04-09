@@ -57,6 +57,7 @@ class Player:
         if computerBoard.board[x][y] != "■":
             print("Hit!")
             computer.addDamageToShip(computerBoard.board[x][y])
+            computerBoard.board[x][y] = "X"
         else:
             print("Miss!")
 
