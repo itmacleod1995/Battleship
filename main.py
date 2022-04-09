@@ -50,8 +50,8 @@ def run_game():
                     computer.fire(x, y, player, playerBoard)
                     findingCoordinates = False
 
-                print("Player's Board")
-                playerBoard.showBoard()
+            print("Player's Board")
+            playerBoard.showBoard()
 
 
             if player.shipsSunk == 5:
