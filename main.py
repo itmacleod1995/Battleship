@@ -2,19 +2,23 @@ from board import Board
 from ship import Ship
 from destroyer import Destroyer
 from player import Player
+from computer import Computer
 from carrier import Carrier
 
 print("----Battleship Game----\n")
 
 def run_game():
 
+    """Set up player and board"""
     playerBoard = Board()
     player = Player(playerBoard)
     player.setUpBoard("gameFiles/playerShip.txt")
 
-
+    """Set Up computer and board"""
     computerBoard = Board()
-    computerPlayer = Player(computerBoard)
+    computer = Computer(computerBoard)
+    #computerPlayer = Player(computerBoard)
+
 
 
     print("Player's board: ")
