@@ -1,6 +1,0 @@
-ship: destroyer
-possible coordinates:
-(2 3) (2 4)
-(7 1) (8 1)
-(4 5) (4 6)
-*********************
