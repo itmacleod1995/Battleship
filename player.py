@@ -52,12 +52,11 @@ class Player:
                         coordinateY = int(c[3])
                         self.board.addShip(coordinateX, coordinateY, patrol)
 
-
-
-    def fire(self, x, y, computerBoard):
-        print("Firing at coordinate ({}. {})".format(x, y))
+    def fire(self, x, y, computerBoard, computer):
+        print("Firing at coordinate ({},{})".format(x, y))
         if computerBoard.board[x][y] != "■":
             print("Hit!")
+            computer.addDamageToShip(computerBoard.board[x][y])
         else:
             print("Miss!")
 

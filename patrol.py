@@ -3,4 +3,4 @@ from ship import Ship
 class PatrolBoat(Ship):
     def __init__(self, name):
         super().__init__(name)
-        self.space = 2
+        self.spaces = 2

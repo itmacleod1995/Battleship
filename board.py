@@ -17,6 +17,7 @@ class Board:
 
     def addShip(self, x, y, ship):
         self.board[x][y] = ship.name
+        ship.coordinates.append((x,y))
 
 
 

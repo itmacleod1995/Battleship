@@ -19,8 +19,6 @@ def run_game():
     computer = Computer(computerBoard)
     computer.setUpBoard("gameFiles/computerShip.txt")
 
-
-
     print("Player's board: ")
     playerBoard.showBoard()
     print("Computer's board: ")
@@ -28,12 +26,15 @@ def run_game():
     print("")
 
     game = True
+    count = 0
     while game:
         print("Player 1's turn: ")
         x = int(input("Enter x coordinate: "))
         y = int(input("Enter y coordinate: "))
-        player.fire(x, y, computerBoard)
-        break
+        player.fire(x, y, computerBoard, computer)
+        if computer.shipsSunk == 5:
+            print("Player wins!")
+            break
 
 
 
