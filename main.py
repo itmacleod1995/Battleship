@@ -17,7 +17,7 @@ def run_game():
     """Set Up computer and board"""
     computerBoard = Board()
     computer = Computer(computerBoard)
-    #computerPlayer = Player(computerBoard)
+    computer.setUpBoard("gameFiles/computerShip.txt")
 
 
 
