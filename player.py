@@ -68,7 +68,7 @@ class Player:
             computerBoard.dummyBoard[x][y] = "X"
         else:
             print("Miss!\n")
-            computerBoard.board[x][y] = " "
+            computerBoard.dummyBoard[x][y] = " "
 
     def addDamageToShip(self, letterOfShip):
         if letterOfShip == "C":
