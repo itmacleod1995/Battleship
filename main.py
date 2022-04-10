@@ -22,8 +22,9 @@ def run_game():
 
     print("Player's board: ")
     playerBoard.showBoard()
-    #print("Computer's board: ")
+    print("Computer's board: ")
     #computerBoard.showBoard()
+    computerBoard.showComputerBoard()
     print("")
 
     game = True
@@ -34,10 +35,10 @@ def run_game():
             x = int(input("Enter x coordinate: "))
             y = int(input("Enter y coordinate: "))
             player.fire(x, y, computerBoard, computer)
-            """
+
             print("Computer's Board")
-            computerBoard.showBoard()
-            """
+            computerBoard.showComputerBoard()
+
             if computer.shipsSunk == 5:
                 print("Player wins!")
                 print("Total rounds = {}".format(round))

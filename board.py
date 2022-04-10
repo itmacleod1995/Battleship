@@ -9,10 +9,17 @@ class Board:
         self.rows = 10
         self.cols = 10
         self.board = [["■" for x in range(self.rows)] for y in range(self.cols)]
+        self.dummyBoard = [["■" for x in range(self.rows)] for y in range(self.cols)]
 
     def showBoard(self):
         print("")
         for row in self.board:
+            print(row)
+        print("")
+
+    def showComputerBoard(self):
+        print("")
+        for row in self.dummyBoard:
             print(row)
         print("")
 
