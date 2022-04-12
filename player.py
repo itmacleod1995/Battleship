@@ -20,6 +20,7 @@ class Player:
         self.patrol = PatrolBoat("P")
 
         self.shipsSunk = 0
+        self.coordinatesHitAt = []
 
     def setUpBoard(self, file):
         with open(file) as file_object:
@@ -69,6 +70,8 @@ class Player:
         else:
             print("Miss!\n")
             computerBoard.dummyBoard[x][y] = " "
+
+        self.coordinatesHitAt.append([x,y])
 
     def addDamageToShip(self, letterOfShip):
         if letterOfShip == "C":

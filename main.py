@@ -32,9 +32,15 @@ def run_game():
     while game:
         if round % 2 == 0:
             print("Player 1's turn: ")
-            x = int(input("Enter x coordinate: "))
-            y = int(input("Enter y coordinate: "))
-            player.fire(x, y, computerBoard, computer)
+            fire = True
+            while fire:
+                x = int(input("Enter x coordinate: "))
+                y = int(input("Enter y coordinate: "))
+                if [x,y] in player.coordinatesHitAt:
+                    print("You already fire there! Picked two new coordinates!")
+                else:
+                    player.fire(x, y, computerBoard, computer)
+                    break
 
             print("Computer's Board")
             computerBoard.showComputerBoard()
